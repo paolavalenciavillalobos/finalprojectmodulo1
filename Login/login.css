@@ -1,0 +1,105 @@
+#body {
+    font-family: 'Karla', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    width: 400px;
+
+}
+
+
+#title {
+    font-size: 36px;
+    color: #212121;
+    width: 399px;
+    height: 50px;
+    font-weight: 700;
+    line-height: 50px;
+    margin-top: 0%;
+    padding-top: 0%;
+}
+
+#text {
+    font-size: 20px;
+    color: #424242;
+    width: 399px;
+    height: 28px;
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.20000000298023224px;
+    margin-bottom: 0%;
+    padding-bottom: 0;
+
+
+}
+
+.bloco {
+    width: 400px;
+    height: 80px;
+    margin-top: 20px;
+}
+
+#senha {
+    border-radius: 16px;
+    width: 400px;
+
+}
+
+#email {
+    border-radius: 16px;
+    width: 400px;
+}
+
+input {
+    width: 400px;
+    height: 56px;
+    margin-top: 5px;
+
+}
+
+label {
+    width: Hug (54px);
+    height: Hug (22px);
+    top: -1px;
+    padding: 1px 4px 1px 4px;
+    gap: 10px;
+
+}
+
+#box {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 10px;
+}
+
+#esqueci {
+    width: 175px;
+    height: 24px;
+    color: #616161;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.20000000298023224px;
+
+}
+
+button {
+    width: 400px;
+    height: 56px;
+    background: #482D83;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.20000000298023224px;
+    font-family: 'Poppins';
+    color: #FFFFFF;
+    margin-top: 40px;
+
+}
