@@ -1,3 +1,7 @@
+function entrar() {
+	window.location.href = `finalprojectmodulo1/mentores/mentores.html`
+}
+
 const formulario = document.getElementById('formulario')
 
 const input = document.getElementById('senha');
