@@ -11,36 +11,47 @@ body {
   flex-direction: column;
   width: 15%;
   min-width: 150px;
-  /* Establece un ancho mínimo */
   background: #482D83;
+  position: relative;
 }
 
 #logo {
-  height: 25vh;
-  position: relative;
-  margin-bottom: 3%;
+  height: 12.5vh;
+  margin: 10%;
+  padding-top: 17%;
 }
 
-#mentorClass {
-  padding-top: 30%;
-  padding-left: 5%;
-  padding-right: 5%;
-  position: absolute;
-  bottom: 0;
-}
+#mentorClass {}
+
 
 .menuText {
-  height: 4vh;
+  display: flex;
+  align-items: center;
   font-family: Poppins;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.2px;
   color: white;
-  background-color: #00C247;
+  background-color: #482D83;
   border: none;
-  padding: 3%;
-  margin: 3%;
+  border-radius: 10px;
+  padding: 4%;
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  cursor: pointer;
+}
+
+.menuText:hover {
+  background-color: #6548a6;
+}
+
+.menuText img {
+  margin-right: 4%;
+  width: 12%;
+  height: 100%;
 }
 
 #cantoDireito {
@@ -51,11 +62,11 @@ body {
 }
 
 #topo {
-  height: 15vh;
+  height: 12.5vh;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  
+
 }
 
 #usuario {
@@ -63,16 +74,18 @@ body {
   padding: 1%;
   display: flex;
   width: 30%;
-  
+  justify-content: flex-end;
 }
 
+
 #userIcon {
+
   background: #482D83;
   border-radius: 50%;
-  width: 30%;
-  height: 30%;
-  margin-top: 4%;
-  /*margin-left: 1%;
+  width: 100%;
+  height: 100%;
+  /*margin: 2%;
+  margin-left: 1%;
   margin-right: 1%;*/
   display: flex;
   align-items: center;
@@ -80,16 +93,18 @@ body {
   /*padding: 12px;*/
 }
 
-#user{
+#user {
 
   width: 50%;
   height: 50%;
-  padding:10%;
-  margin:10%;
+  padding: 0%;
+  margin: 0%;
+  display: flex;
+  align-items: center;
 }
 
-#dados{
-  margin-left: 6%;
+#dados {
+  margin-left: 3%;
 }
 
 #userName {
@@ -120,10 +135,16 @@ body {
 }
 
 #title {
+  height: 10vh;
+  margin: 1%;
+  padding: 1%;
+}
+
+#mentores {
   font-family: Sora;
-  font-size: 10rem;
-  /*font-weight: 600;
-    line-height: 1.5;*/
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.5;
   letter-spacing: 0;
   color: #212121;
   margin: 1%;
@@ -131,34 +152,53 @@ body {
 }
 
 #pesquisa {
+  height: 10vh;
+  margin: 1%;
+  padding: 1%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+#allSearch {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
 #search {
+  position: absolute;
   width: 100%;
+  height: 80%;
   border-radius: 16px;
   border: 1.5px solid #E0E0E0;
   background: linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(0deg, #E0E0E0, #E0E0E0);
   font-family: Poppins;
-  font-size: 1rem;
+  font-size: 0.7rem;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.2px;
   color: #757575;
-  padding: 10px;
+}
+
+#searchIcon {
+  position: absolute;
+  left: 90%;
+  height: 40%;
+
 }
 
 #novoMentor {
-  padding: 12px 64px;
+  width: 20%;
+  height: 80%;
   border-radius: 16px;
-  gap: 10px;
   background: #00C247;
   color: white;
   border: none;
   font-family: Poppins;
-  font-size: 1rem;
+  font-size: 0.7rem;
   font-weight: 600;
   line-height: 1.5;
   letter-spacing: 0.2px;
@@ -173,17 +213,79 @@ body {
   padding: 2%;
 }
 
-.container.text-center {
-  padding-top: 30px;
-  margin-top: 30px;
+.container {
+  height: 100%;
+  width: 100%;
+
 }
 
-.row {
-  height: 72px;
-  border-radius: 16px 16px 0px 0px;
-  padding-top: 30px;
-  margin-top: 30px;
+
+.my-table {
+  width: 100%;
+  border-radius: 16px;
+  padding: 30%;
+  font-family: Poppins;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.20000000298023224px;
+  overflow: hidden;
+
 }
+
+.my-table th {
+  background-color: #482D83;
+  color: #FFFFFF;
+}
+
+.my-table .td{
+  color: black;
+}
+
+.my-table th,
+.my-table td {
+  border: none;
+  padding: 0.5%;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.my-table .left {
+  text-align: left;
+}
+
+.my-table .center {
+  text-align: center;
+}
+
+.my-table .right {
+  text-align: right;
+}
+
+.my-table .row1 {
+  background-color: #E0E0E0;
+  ;
+}
+
+.my-table .row2 {
+  background-color: #FAFAFA;
+
+}
+
+.my-table .editButton{
+background-color: white;
+border-radius: 50%;
+border: none;
+padding: 2%;
+}
+
+.my-table .deleteButton{
+  background-color: white;
+  border-radius: 50%;
+  border: none;
+  padding: 1.8%;
+}
+
 
 /* Media queries para ajustar el diseño en diferentes tamaños de pantalla */
 

@@ -24,8 +24,9 @@
     <div id="logo">
       <img src="https://i.ibb.co/QPm39fQ/mentorclass.png" id="mentorClass" width="100%" height="50%" />
     </div>
-    <button class="menuText"> <img src="https://i.ibb.co/XJk7P80/User.png" alt="User" width="20%"
-        height="100vh" />Mentores</button>
+    <button class="menuText"> 
+      <img src="https://i.ibb.co/XJk7P80/User.png" alt="User" />
+      Mentores</button>
     <button class="menuText"><img src="https://i.ibb.co/j6NWz8F/notebook-and-pen.png" alt="notebook-and-pen" width="20%"
         height="100%" />Mentorias</button>
     <button class="menuText"><img src="https://i.ibb.co/BtKzc8p/playback-progress.png" alt="playback-progress"
@@ -39,8 +40,10 @@
 
     <div id="topo">
       <div id="usuario">
-        <div id="userIcon">
-          <img src="https://i.ibb.co/XJk7P80/User.png" id="User">
+        <div id="allIcon">
+          <div id="userIcon">
+            <img id="user" src="https://i.ibb.co/XJk7P80/User.png">
+          </div>
         </div>
         <div id="dados">
           <p id="userName">Manuela Silva</p>
@@ -51,50 +54,63 @@
     </div>
 
     <div id="title">
-      <h4>Mentores</h4>
+      <h4 id="mentores">Mentores</h4>
     </div>
 
     <div id="bloco">
       <form id="pesquisa">
 
-        <div>
+        <div id="allSearch">
           <input type="text" id="search" placeholder="Pesquise uma palavra chave...">
-          <img src="https://i.ibb.co/pQgbyFQ/search.png" alt="search">
+          <img src="https://i.ibb.co/pQgbyFQ/search.png" id="searchIcon" alt="search">
         </div>
 
-        <button type="submit" id="novoMentor">Novo Mentor</button>
+        <button type="submit" id="novoMentor">
+          <img src="https://i.ibb.co/Qp1MMc0/Plus-24px-1.png" alt="Plus-24px-1">
+          Novo Mentor</button>
       </form>
 
       <div class="container">
-        <table class="table table-bordered">
+        <table class="my-table">
           <thead>
             <tr>
-              <th>Nome</th>
-              <th>Email</th>
-              <th>Ações</th>
+              <th class="left">Nome</th>
+              <th class="center">Email</th>
+              <th class="right">Ações</th>
             </tr>
           </thead>
           <tbody>
-            <tr class=>
-              <td>Nome</td>
-              <td>Email</td>
-              <td>Ações</td>
+            <tr class="row1">
+              <td class="left">Dato 1</td>
+              <td class="center">Dato 2</td>
+              <td class="right">
+                <button class="editButton">
+                  <img src="https://i.ibb.co/n6sqKDC/Subtract.png" alt="Subtract" >
+                </button>
+                <button class="deleteButton">
+                  <img src="https://i.ibb.co/Ry7XDt6/delete.png" alt="delete">
+                </button>
+              </td>
             </tr>
-            <tr>
-              <td>Nome</td>
-              <td>Email</td>
-              <td>Ações</td>
-            </tr>
-            <tr>
-              <td>Nome</td>
-              <td>Email</td>
-              <td>Ações</td>
+            <tr class="row2">
+              <td class="left">Dato 4</td>
+              <td class="center">Dato 5</td>
+              <td class="right">
+                <button class="editButton">
+                  <img src="https://i.ibb.co/n6sqKDC/Subtract.png" alt="Subtract" >
+                </button>
+                <button class="deleteButton">
+                  <img src="https://i.ibb.co/Ry7XDt6/delete.png" alt="delete">
+                </button>
+              </td>
             </tr>
           </tbody>
         </table>
       </div>
-
-
+      
+      
+      
+      
 
 
 
