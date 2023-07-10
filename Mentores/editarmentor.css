@@ -1,0 +1,188 @@
+body {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #menu {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    min-width: 150px;
+    background: #482D83;
+    position: relative;
+  }
+  
+  #logo {
+    height: 12.5vh;
+    margin: 10%;
+    padding-top: 17%;
+  }
+  
+  .menuText {
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+    color: white;
+    background-color: #482D83;
+    border: none;
+    border-radius: 10px;
+    padding: 4%;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    cursor: pointer;
+  }
+  
+  .menuText:hover {
+    background-color: #6548a6;
+  }
+  
+  .menuText img {
+    margin-right: 4%;
+    width: 12%;
+    height: 100%;
+  }
+  
+  #cantoDireito {
+    flex: 1;
+    /* Ocupa el espacio restante */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #topo {
+    height: 12.5vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  
+  }
+  
+  #usuario {
+    margin-top: 5%;
+    margin-right: 2%;
+    padding: 1%;
+    display: flex;
+    width: 30%;
+    justify-content: flex-end;
+  }
+  
+  
+  #userIcon {
+  
+    background: #482D83;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    /*margin: 2%;
+    margin-left: 1%;
+    margin-right: 1%;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*padding: 12px;*/
+  }
+  
+  #user {
+  
+    width: 50%;
+    height: 50%;
+    padding: 0%;
+    margin: 0%;
+    display: flex;
+    align-items: center;
+  }
+  
+  #dados {
+    margin-left: 3%;
+  }
+  
+  #userName {
+  
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Sora', sans-serif;
+    font-size: 90%;
+    font-weight: 600;
+    /*line-height: 28px;*/
+    letter-spacing: 0.20000000298023224px;
+    color: #212121;
+  
+  
+  }
+  
+  #userMail {
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 60%;
+    font-weight: 500;
+    /*line-height: 24px;*/
+    letter-spacing: 0.20000000298023224px;
+    color: #757575;
+  
+  
+  }
+  
+  #title {
+    height: 10vh;
+    margin: 1%;
+    padding: 1%;
+  }
+  
+  #mentores {
+    font-family: 'Sora', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 0;
+    color: #212121;
+    margin: 1%;
+    padding: 1%;
+  }
+  
+  
+  
+  #bloco {
+    flex: 1;
+    /* Ocupa el espacio restante */
+    border-radius: 24px;
+    box-shadow: 0px 0px 25px 0px #A3A3A333;
+    margin: 2%;
+    padding: 1%;
+  }
+  
+  .container {
+    height: 100%;
+    width: 100%;
+  
+  }
+  
+  
+  
+  
+  
+  /* Media queries para ajustar el diseño en diferentes tamaños de pantalla */
+  
+  @media screen and (max-width: 768px) {
+    body {
+      flex-direction: column;
+    }
+  
+    #menu {
+      width: 100%;
+      min-width: 0;
+    }
+  
+    #cantoDireito {
+      width: 100%;
+    }
+  }

@@ -9,11 +9,6 @@
       "id": 2,
       "nome": "Mentor 2",
       "email": "mentor2@email.com"
-    },
-    {
-      "nome": "mentor3",
-      "email": "mentor3@email.com",
-      "id": 3
     }
   ]
 }
