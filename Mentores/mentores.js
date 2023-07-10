@@ -1,3 +1,9 @@
+function novoMentor() {
+	window.location = "novomentor.html";
+}
+
+
+document.getElementById('novoMentor').addEventListener('click', novoMentor);
 
 
 const mentores = (mentores) => {
