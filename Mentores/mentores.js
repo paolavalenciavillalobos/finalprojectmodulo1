@@ -1,13 +1,15 @@
 function novoMentor() {
-	window.location.href = `novomentor.html`;
+	//e.preventDefault()
+	window.location = `novomentor.html`;
 }
+console.log(novoMentor)
 
 function editar(identificador) {
 	window.location = `editarmentor.html?id=${identificador}`
 }
 
 
-document.getElementById('novoMentor').addEventListener('click', novoMentor);
+//document.getElementById('novoMentor').addEventListener('click', novoMentor);
 
 
 const mentores = (mentores) => {
@@ -16,6 +18,7 @@ const mentores = (mentores) => {
 	mentores.forEach((item) => {
 		const mentoreshtml =
 		 `
+		 <tr>
 		 <td class="left">${item.nome}</td>
 		 <td class="center">${item.email}</td>
 		 <td class="right">
@@ -26,6 +29,7 @@ const mentores = (mentores) => {
 			 <img src="https://i.ibb.co/Ry7XDt6/delete.png" alt="delete">
 		   </button>
 		 </td>
+		 </tr>
 		`
 		table.innerHTML = table.innerHTML + mentoreshtml
 		;
