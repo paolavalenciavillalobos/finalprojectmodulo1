@@ -136,6 +136,8 @@ body {
     height: 10vh;
     margin: 1%;
     padding: 1%;
+    display: flex;
+    align-items: left;
   }
   
   #mentores {
@@ -145,8 +147,8 @@ body {
     line-height: 1.5;
     letter-spacing: 0;
     color: #212121;
-    margin: 1%;
-    padding: 1%;
+
+    
   }
   
   
@@ -159,12 +161,38 @@ body {
     margin: 2%;
     padding: 1%;
   }
-  
-  .container {
+
+  #formulario {
+    display: flex;
+    flex-direction: column;
     height: 100%;
-    width: 100%;
-  
+    width: 500%;
+    
   }
+  
+
+  #atualizarDados {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .inputDados {
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+    width: 35%;
+  }
+  
+  .inputDados label {
+    padding-bottom: 10%;
+  }
+  
+  .inputDados input {
+    width: 100%;
+    border-radius: 16px;
+  }
+  
   
   
   

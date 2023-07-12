@@ -6,9 +6,6 @@ body {
   padding: 0;
 }
 
-tr:nth-child(even){
-  background-color: grey;
-}
 
 #menu {
   display: flex;
@@ -163,7 +160,7 @@ tr:nth-child(even){
 }
 
 #allSearch {
-  width: 40%;
+  width: 30%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -179,7 +176,7 @@ tr:nth-child(even){
   background: linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(0deg, #E0E0E0, #E0E0E0);
   font-family: 'Poppins', sans-serif;
   font-size: 0.7rem;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.5;
   letter-spacing: 0.2px;
   color: #757575;
@@ -229,14 +226,17 @@ tr:nth-child(even){
 
 .my-table {
   width: 100%;
-  border-radius: 16px;
-  padding: 30%;
+  /*border-radius: 16px;*/
+  border-radius: 4%/4%;
+  padding: 0%;
   font-family: 'Poppins', sans-serif;
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.20000000298023224px;
   overflow: hidden;
+  border-collapse: separate;
+  border-spacing: 0px 5px;
 
 }
 
@@ -245,8 +245,13 @@ tr:nth-child(even){
   color: #FFFFFF;
 }
 
-.my-table .td{
-  color: black;
+.my-table td{
+  color: #212121;
+font-weight: 600;
+line-height: 24px;
+letter-spacing: 0.20000000298023224px;
+
+
 }
 
 .my-table th,
@@ -260,37 +265,36 @@ tr:nth-child(even){
 .my-table .left {
   text-align: left;
   padding-left: 3%;
-  padding-top: 0.5%;
-  padding-bottom: 0.5%;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
 }
 
 .my-table .center {
   text-align: center;
-  padding-top: 0.5%;
-  padding-bottom: 0.5%;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
 }
 
 .my-table .right {
   text-align: right;
   padding-right: 3%;
-  padding-top: 0.5%;
-  padding-bottom: 0.5%;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
 }
 
-.my-table .row1 {
+tr:nth-child(even){
   background-color: #E0E0E0;
-  ;
 }
 
-.my-table .row2 {
-  background-color: #FAFAFA;
-
+tr:nth-child(odd){
+  background-color:  #FAFAFA;
 }
 
 .my-table .editButton{
 background-color: white;
 border-radius: 50%;
-border: none;
+border-color: red;
+border: 10px;
 padding: 2%;
 
 }
@@ -303,7 +307,8 @@ padding: 2%;
 .my-table .deleteButton{
   background-color: white;
   border-radius: 50%;
-  border: none;
+  border-color: #E0E0E0;
+  border: 1px;
   padding: 1.8%;
  
 }
