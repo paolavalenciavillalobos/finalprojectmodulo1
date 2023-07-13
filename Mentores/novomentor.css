@@ -147,11 +147,13 @@ body {
   line-height: 1.5;
   letter-spacing: 0;
   color: #212121;
-
-
 }
 
-
+#back{
+  border-radius: 50%;
+  border: none;
+  margin-right: 1%;
+}
 
 #bloco {
   flex: 1;
@@ -180,11 +182,6 @@ body {
   padding-bottom: 1.5%;
 
 
-}
-
-#back{
-  border-radius: 50%;
-  border: none;
 }
 
 

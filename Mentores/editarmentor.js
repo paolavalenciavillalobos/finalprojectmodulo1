@@ -1,3 +1,7 @@
+function back() {
+	window.location = "mentores.html";
+}
+
 //Pegar o formulario desde o Id no html
 const formulario = document.getElementById('formulario')
 
