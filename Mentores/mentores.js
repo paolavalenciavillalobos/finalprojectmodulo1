@@ -1,8 +1,8 @@
-function mentorias() {
-	window.location = `mentorias.html`;
+function mentoriasButton() {
+	window.location = `../mentorias/mentorias.html`;
 }
 
-function mentores() {
+function mentoresButton() {
 	window.location = `mentores.html`;
 }
 
