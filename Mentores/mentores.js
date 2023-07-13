@@ -1,3 +1,13 @@
+function mentorias() {
+	window.location = `mentorias.html`;
+}
+
+function mentores() {
+	window.location = `mentores.html`;
+}
+
+
+
 function addNovoMentor() {
 	//e.preventDefault()
 	window.location = `novomentor.html`;
