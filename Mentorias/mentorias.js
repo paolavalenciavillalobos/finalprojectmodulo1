@@ -11,8 +11,8 @@ const mentorias = (parametromentores) => {
         const mentoriashtml =
         `
         <tr>
-        <td class="left">${item.mentoria.titulo}</td>
-        <td class="center">${item.nome}</td>
+        <td class="left">${item.titulo}</td>
+        <td class="center">${item.mentor.nome}</td>
         <td class="right"><div></div></td>
         <td class="right">
           <button class="editButton"onclick="editar(${item.id})">
@@ -29,7 +29,7 @@ const mentorias = (parametromentores) => {
 }
 
 const carregarTodosOsDados = async () => {
-    const response = await fetch ('http://localhost:3000/mentores')
+    const response = await fetch ('http://localhost:3000/mentorias')
     const todosOsDados = await response.json()
     mentorias(todosOsDados)
 };

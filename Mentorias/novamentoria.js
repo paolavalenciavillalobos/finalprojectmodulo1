@@ -28,7 +28,7 @@ const mentoresSelect = async() => {
 
 const novaMentoria = async(mentorparametro) => {
     try {
-        await fetch('http://localhost:3000/mentores', {
+        await fetch('http://localhost:3000/mentorias', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json, text/plain, */*',
@@ -53,7 +53,7 @@ formulario.addEventListener('submit', async(e) => {
     console.log(mentoria)
 
     const mentoriaNova = {
-        mentoria,
+        titulo: mentoria,
         mentor: { 
             nome: mentorObjeto.nome,
             id: mentorObjeto.id
