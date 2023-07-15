@@ -42,20 +42,12 @@
       }
     },
     {
-      "titulo": "nova",
+      "titulo": "novametoria",
       "mentor": {
         "nome": "Mentor 2",
         "id": 2
       },
       "id": 3
-    },
-    {
-      "titulo": "pollito",
-      "mentor": {
-        "nome": "Mentor 2",
-        "id": 2
-      },
-      "id": 4
     }
   ]
 }

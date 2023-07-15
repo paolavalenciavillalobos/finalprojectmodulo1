@@ -2,7 +2,9 @@ function addNovaMentoria () {
     window.location = 'novamentoria.html'
 }
 
-
+function editar(identificador) {
+	window.location = `editarmentoria.html?id=${identificador}`
+}
 
 const mentorias = (parametromentores) => {
     const tabla = document.querySelector('.my-table tbody')
@@ -32,6 +34,20 @@ const carregarTodosOsDados = async () => {
     const response = await fetch ('http://localhost:3000/mentorias')
     const todosOsDados = await response.json()
     mentorias(todosOsDados)
+};
+
+const excluir = async (titulo) =>{
+	try {
+		await fetch(`http://localhost:3000/mentorias/${titulo}`, {
+			method: 'DELETE',
+			headers: {
+				'Accept': 'application/json',
+			}
+		});
+		carregarTodosOsDados()
+	} catch (error) {
+		console.error(error);
+	}
 };
 
 carregarTodosOsDados()

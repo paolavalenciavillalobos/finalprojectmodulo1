@@ -9,7 +9,6 @@ function mentoresButton() {
 
 
 function addNovoMentor() {
-	//e.preventDefault()
 	window.location = `novomentor.html`;
 }
 
@@ -17,10 +16,6 @@ function addNovoMentor() {
 function editar(identificador) {
 	window.location = `editarmentor.html?id=${identificador}`
 }
-
-
-//document.getElementById('novoMentor').addEventListener('click', novoMentor);
-
 
 
 const mentores = (mentores) => {
