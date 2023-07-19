@@ -33,7 +33,7 @@ const turmasTabela = (parametroTurmas) => {
         <td class="center">${elemento.data}</td>
         <td class="center">${elemento.dia}</td>
         <td class="right">${elemento.horaInicio}-${elemento.horaFinal}</td>
-        <td class="right">${elemento.encontros}</td>
+        <td class="right">0/${elemento.encontros}</td>
         <td class="right"><div></div></td>
         <td class="right">
           <button class="editButton"onclick="editar(${elemento.id})">

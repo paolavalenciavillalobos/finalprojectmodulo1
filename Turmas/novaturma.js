@@ -19,8 +19,8 @@ const mentoresSelect = async () => {
     const listaDeMentores = await buscarMentores()
     const mentoresFormulario = document.getElementById('selectMentores')
 
-    listaDeMentores.forEach(theMentor => {
-        const option = new Option(theMentor.nome, theMentor.id, theMentor.email)
+    listaDeMentores.forEach(item => {
+        const option = new Option(item.nome, item.id)
         mentoresFormulario.options.add(option)
     });
     console.log(mentoresFormulario)
@@ -86,7 +86,6 @@ formulario.addEventListener('submit', async (e) => {
     const newTurma = {
         mentor: {
             nome: mentorObjeto.nome,
-            email: mentorObjeto.email,
             id: mentorObjeto.id
         },
         mentoria: {

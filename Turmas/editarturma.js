@@ -29,7 +29,8 @@ const mentoresSelect = async() => {
     const mentoresFormulario = document.getElementById('selectMentores')
 
     listaDeMentores.forEach(theMentor => {
-        const option = new Option (theMentor.nome , theMentor.id)
+        const optionText = `${theMentor.nome} (${theMentor.email})`;
+        const option = new Option(optionText, theMentor.id);
         mentoresFormulario.options.add(option)
     });
     console.log(mentoresFormulario)

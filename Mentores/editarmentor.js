@@ -19,7 +19,7 @@ const parametrosId = async () => {
 
 }
 
-//carregar toda a informção da API
+//carregar a informção da API
 
 const carregarMentores = async () => {
     const response = await fetch(`http://localhost:3000/mentores/${id}`)
@@ -42,7 +42,7 @@ const editarMentores = async (mentor) => {
     window.location = 'mentores.html'
 }
 
-//Pegar os dados do input
+//Carregar os valores no input
 const editarFormularioMentores = async (parametroeditar) => {
     document.getElementById('nome').value = parametroeditar.nome
     document.getElementById('email').value = parametroeditar.email

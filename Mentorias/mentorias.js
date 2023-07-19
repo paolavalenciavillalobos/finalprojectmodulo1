@@ -36,9 +36,9 @@ const carregarTodosOsDados = async () => {
     mentorias(todosOsDados)
 };
 
-const excluir = async (titulo) =>{
+const excluir = async (identificador) =>{
 	try {
-		await fetch(`http://localhost:3000/mentorias/${titulo}`, {
+		await fetch(`http://localhost:3000/mentorias/${identificador}`, {
 			method: 'DELETE',
 			headers: {
 				'Accept': 'application/json',
