@@ -28,6 +28,7 @@
     {
       "id": 1,
       "titulo": "mentoria1",
+      "status": "ativo",
       "mentor": {
         "id": 1,
         "nome": "mentor1"
@@ -36,6 +37,7 @@
     {
       "id": 2,
       "titulo": "mentoria2",
+      "status": "inativo",
       "mentor": {
         "id": 2,
         "nome": "mentor2"
@@ -43,6 +45,7 @@
     },
     {
       "titulo": "novametoria",
+      "status": "ativo",
       "mentor": {
         "nome": "Mentor 2",
         "id": 2

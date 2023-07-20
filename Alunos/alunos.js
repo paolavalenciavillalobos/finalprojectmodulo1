@@ -1,7 +1,7 @@
 const alunos = (parametroAlunos) => {
     const tabla = document.querySelector('.my-table tbody')
     tabla.innerHTML = ''
-    parametroAlunos.forEach(element => {
+    parametroAlunos.forEach(item => {
         const alunosHtml =
         `
         <tr>

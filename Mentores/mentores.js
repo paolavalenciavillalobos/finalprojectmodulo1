@@ -17,6 +17,8 @@ function editar(identificador) {
 	window.location = `editarmentor.html?id=${identificador}`
 }
 
+const search = document.getElementById('search')
+
 
 const mentores = (mentores) => {
 	const table = document.querySelector('.my-table tbody')
@@ -41,8 +43,13 @@ const mentores = (mentores) => {
 		;
 })}
 
-const todosOsMentores = async () => {
-    const response = await fetch(`http://localhost:3000/mentores`)
+const todosOsMentores = async (parametroNãoObrigatorio = null) => {
+	let inputData = ''
+	if(parametroNãoObrigatorio){
+		inputData = `?q=${parametroNãoObrigatorio}`
+	}
+
+    const response = await fetch(`http://localhost:3000/mentores${inputData}`)
     const mentoresData = await response.json()
     mentores(mentoresData)
 }
@@ -60,5 +67,16 @@ const excluir = async (id) =>{
 		console.error(error);
 	}
 };
+
+search.addEventListener('keyup', (e) => {
+	const inputData = search.value
+	console.log(inputData)
+	if (inputData === ''){
+		todosOsMentores()
+	}
+	else if(e.key === 'Enter'){
+		todosOsMentores(inputData)
+	}
+})
 
 todosOsMentores()
