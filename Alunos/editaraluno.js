@@ -10,13 +10,13 @@ const searchId = async () => {
 }
 
 const carregarAlunos = async() => {
-    const response = await fetch(`http://localhost:3000/alunos/${id}`)
+    const response = await fetch(`https://api-final-project-pkm5.onrender.com/alunos/${id}`)
     const alunos = await response.json()
     return alunos
 }
 
 const editarAluno = async (parametroaluno) => {
-    await fetch(`http://localhost:3000/mentores/${id}`, {
+    await fetch(`https://api-final-project-pkm5.onrender.com/mentores/${id}`, {
         method: 'PUT',
         headers: {
             'Accept': 'application/json, text/plain, */*',

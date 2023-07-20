@@ -7,7 +7,7 @@ const formulario = document.getElementById('formulario')
 
 const carregarMentores = async (mentor) => {
     try {
-        await fetch('http://localhost:3000/mentores', {
+        await fetch('https://api-final-project-pkm5.onrender.com/mentores', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json, text/plain, */*',

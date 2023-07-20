@@ -45,7 +45,7 @@ const statusDiv = () => {
 }
 
 const carregarTodosOsDados = async () => {
-    const response = await fetch ('http://localhost:3000/mentorias')
+    const response = await fetch ('https://api-final-project-pkm5.onrender.com/mentorias')
     const todosOsDados = await response.json()
     mentorias(todosOsDados)
     statusDiv()
@@ -53,7 +53,7 @@ const carregarTodosOsDados = async () => {
 
 const excluir = async (identificador) =>{
 	try {
-		await fetch(`http://localhost:3000/mentorias/${identificador}`, {
+		await fetch(`https://api-final-project-pkm5.onrender.com/mentorias/${identificador}`, {
 			method: 'DELETE',
 			headers: {
 				'Accept': 'application/json',

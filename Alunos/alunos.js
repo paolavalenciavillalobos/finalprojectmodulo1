@@ -23,7 +23,7 @@ const alunos = (parametroAlunos) => {
 }
 
 const carregarAlunos = async() => {
-    const response = await fetch (`http://localhost:3000/alunos`)
+    const response = await fetch (`https://api-final-project-pkm5.onrender.com/alunos`)
     const listaAlunos = await response.json()
     alunos(listaAlunos)
 }

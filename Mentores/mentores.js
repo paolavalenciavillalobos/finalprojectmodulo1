@@ -49,14 +49,14 @@ const todosOsMentores = async (parametroNãoObrigatorio = null) => {
 		inputData = `?q=${parametroNãoObrigatorio}`
 	}
 
-    const response = await fetch(`http://localhost:3000/mentores${inputData}`)
+    const response = await fetch(`https://api-final-project-pkm5.onrender.com/mentores${inputData}`)
     const mentoresData = await response.json()
     mentores(mentoresData)
 }
 
 const excluir = async (id) =>{
 	try {
-		await fetch(`http://localhost:3000/mentores/${id}`, {
+		await fetch(`https://api-final-project-pkm5.onrender.com/mentores/${id}`, {
 			method: 'DELETE',
 			headers: {
 				'Accept': 'application/json',

@@ -8,7 +8,7 @@ const editar = (identificador) => {
 
 const excluir = async (identificador) =>{
 	try {
-		await fetch(`http://localhost:3000/turmas/${identificador}`, {
+		await fetch(`https://api-final-project-pkm5.onrender.com/turmas/${identificador}`, {
 			method: 'DELETE',
 			headers: {
 				'Accept': 'application/json',
@@ -51,7 +51,7 @@ const turmasTabela = (parametroTurmas) => {
 }
 
 const carregarTurmas = async () => {
-    const response = await fetch ('http://localhost:3000/turmas')
+    const response = await fetch ('https://api-final-project-pkm5.onrender.com/turmas')
     const todasAsTurmas = await response.json()
     turmasTabela(todasAsTurmas)
 }

@@ -22,7 +22,7 @@ const parametrosId = async () => {
 //carregar a informção da API
 
 const carregarMentores = async () => {
-    const response = await fetch(`http://localhost:3000/mentores/${id}`)
+    const response = await fetch(`https://api-final-project-pkm5.onrender.com/mentores/${id}`)
     const mentores = await response.json()
     console.log(mentores)
     return mentores
@@ -31,7 +31,7 @@ const carregarMentores = async () => {
 
 //Editar a informação da API
 const editarMentores = async (mentor) => {
-    await fetch(`http://localhost:3000/mentores/${id}`, {
+    await fetch(`https://api-final-project-pkm5.onrender.com/mentores/${id}`, {
         method: 'PUT',
         headers: {
             'Accept': 'application/json, text/plain, */*',

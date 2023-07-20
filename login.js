@@ -1,5 +1,5 @@
 function entrar() {
-	window.location.href = `finalprojectmodulo1/mentores/mentores.html`
+	window.location= `../mentores/mentores.html`
 }
 
 const formulario = document.getElementById('formulario')
@@ -32,7 +32,7 @@ email.addEventListener('input', () => {
 
 const getUser = async (user) => {
     try {
-        await fetch('http://localhost:3000/Usuario', {
+        await fetch('https://api-final-project-pkm5.onrender.com/Usuario', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json, text/plain, */*',

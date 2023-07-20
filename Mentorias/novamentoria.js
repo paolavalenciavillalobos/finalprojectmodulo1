@@ -4,13 +4,13 @@ const buscarMentor = async (id) => {
     if(id == null){
         return false
     }
-    const response = await fetch (`http://localhost:3000/mentores/${id}`)
+    const response = await fetch (`https://api-final-project-pkm5.onrender.com/mentores/${id}`)
     const mentor = await response.json()
     return mentor
 }
 
 const buscarMentores = async () => {
-    const response = await fetch (`http://localhost:3000/mentores/`)
+    const response = await fetch (`https://api-final-project-pkm5.onrender.com/mentores/`)
     const mentores = await response.json()
     return mentores
 }
@@ -28,7 +28,7 @@ const mentoresSelect = async() => {
 
 const novaMentoria = async(mentorparametro) => {
     try {
-        await fetch('http://localhost:3000/mentorias', {
+        await fetch('https://api-final-project-pkm5.onrender.com/mentorias', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json, text/plain, */*',

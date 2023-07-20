@@ -4,13 +4,13 @@ const carregarMentor = async (id) => {
     if (id == null) {
         return false
     }
-    const response = await fetch(`http://localhost:3000/mentores/${id}`)
+    const response = await fetch(`https://api-final-project-pkm5.onrender.com/mentores/${id}`)
     const mentor = await response.json()
     return mentor
 }
 
 const buscarMentores = async () => {
-    const response = await fetch(`http://localhost:3000/mentores/`)
+    const response = await fetch(`https://api-final-project-pkm5.onrender.com/mentores/`)
     const mentores = await response.json()
     return mentores
 }
@@ -30,13 +30,13 @@ const carregarMentoria = async (id) => {
     if (id == null) {
         return false
     }
-    const response = await fetch(`http://localhost:3000/mentorias/${id}`)
+    const response = await fetch(`https://api-final-project-pkm5.onrender.com/mentorias/${id}`)
     const mentoria = await response.json()
     return mentoria
 }
 
 const buscarMentorias = async () => {
-    const response = await fetch(`http://localhost:3000/mentorias/`)
+    const response = await fetch(`https://api-final-project-pkm5.onrender.com/mentorias/`)
     const mentorias = await response.json()
     return mentorias
 }
@@ -54,7 +54,7 @@ const mentoriasSelect = async () => {
 
 const novaTurma = async (turmaParametro) => {
     try {
-        await fetch('http://localhost:3000/turmas', {
+        await fetch('https://api-final-project-pkm5.onrender.com/turmas', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json, text/plain, */*',

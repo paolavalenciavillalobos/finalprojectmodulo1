@@ -13,13 +13,13 @@ const buscarMentor = async (id) => {
     if(id == null){
         return false
     }
-    const response = await fetch (`http://localhost:3000/mentores/${id}`)
+    const response = await fetch (`https://api-final-project-pkm5.onrender.com/mentores/${id}`)
     const mentor = await response.json()
     return mentor
 }
 
 const buscarMentores = async () => {
-    const response = await fetch (`http://localhost:3000/mentores/`)
+    const response = await fetch (`https://api-final-project-pkm5.onrender.com/mentores/`)
     const mentores = await response.json()
     return mentores
 }
@@ -36,14 +36,14 @@ const mentoresSelect = async() => {
 }
 
 const carregarMentorias = async () => {
-    const response = await fetch(`http://localhost:3000/mentorias/${id}`)
+    const response = await fetch(`https://api-final-project-pkm5.onrender.com/mentorias/${id}`)
     const mentoria = await response.json()
     console.log(mentoria)
     return mentoria
 }
 
 const editarMentorias = async (mentoria) => {
-    await fetch(`http://localhost:3000/mentorias/${id}`, {
+    await fetch(`https://api-final-project-pkm5.onrender.com/mentorias/${id}`, {
         method: 'PUT',
         headers: {
             'Accept': 'application/json, text/plain, */*',
