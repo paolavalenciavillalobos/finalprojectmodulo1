@@ -1,3 +1,19 @@
+function mentoriasButton() {
+	window.location = `mentorias.html`;
+}
+
+function mentoresButton() {
+	window.location = `../mentores/mentores.html`;
+}
+
+function turmasButton() {
+	window.location = `../turmas/turmas.html`;
+}
+
+function alunosButton() {
+	window.location = `../alunos/alunos.html`;
+}
+
 function addNovaMentoria () {
     window.location = 'novamentoria.html'
 }
@@ -37,9 +53,11 @@ const statusDiv = () => {
   divsStatus.forEach((div) => {
       const statusValue = div.textContent.trim() // Obtener el valor del status
       if (statusValue === 'ativo') {
-          div.style.backgroundColor = 'green'; 
+          div.style.backgroundColor = '#D9FEE6'; 
+          div.style.color = '#00C247';
       } else if (statusValue === 'inativo') {
-          div.style.backgroundColor = 'red'; 
+          div.style.backgroundColor = '#FFE1E1'; 
+          div.style.color = '#FF3333';
       }
   });
 }

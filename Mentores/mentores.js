@@ -6,6 +6,13 @@ function mentoresButton() {
 	window.location = `mentores.html`;
 }
 
+function turmasButton() {
+	window.location = `../turmas/turmas.html`;
+}
+
+function alunosButton() {
+	window.location = `../alunos/alunos.html`;
+}
 
 
 function addNovoMentor() {
@@ -44,12 +51,13 @@ const mentores = (mentores) => {
 })}
 
 const todosOsMentores = async (parametroNãoObrigatorio = null) => {
-	let inputData = ''
+	let inputText = ''
 	if(parametroNãoObrigatorio){
-		inputData = `?q=${parametroNãoObrigatorio}`
+		inputText = `?q=${parametroNãoObrigatorio}`
+		console.log(inputText)
 	}
 
-    const response = await fetch(`https://api-final-project-pkm5.onrender.com/mentores${inputData}`)
+    const response = await fetch(`https://api-final-project-pkm5.onrender.com/mentores${inputText}`)
     const mentoresData = await response.json()
     mentores(mentoresData)
 }

@@ -1,3 +1,19 @@
+function mentoriasButton() {
+	window.location = `mentorias.html`;
+}
+
+function mentoresButton() {
+	window.location = `../mentores/mentores.html`;
+}
+
+function turmasButton() {
+	window.location = `../turmas/turmas.html`;
+}
+
+function alunosButton() {
+	window.location = `../alunos/alunos.html`;
+}
+
 const formulario = document.getElementById('formulario')
 
 const buscarMentor = async (id) => {
@@ -42,11 +58,16 @@ const novaMentoria = async(mentorparametro) => {
     }
 }
 
+
 formulario.addEventListener('submit', async(e) => {
     e.preventDefault()
 
     const mentoria = formulario.elements['mentoria'].value
     const mentor = formulario.elements['selectMentores'].value
+    /*Pegar o elemento input do html desde o ID*/
+    const checkbox = document.getElementById("flexSwitchCheckChecked");
+    /*Dar o valor de ativo o inativo pro Status com operador ternario (true/false)*/
+    const status = checkbox.checked ? 'ativo' : 'inativo';
 
     const mentorObjeto = await buscarMentor(mentor)
 
@@ -54,6 +75,7 @@ formulario.addEventListener('submit', async(e) => {
 
     const mentoriaNova = {
         titulo: mentoria,
+        status,
         mentor: { 
             nome: mentorObjeto.nome,
             id: mentorObjeto.id

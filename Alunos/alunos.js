@@ -1,3 +1,19 @@
+function mentoriasButton() {
+	window.location = `../mentorias/mentorias.html`;
+}
+
+function mentoresButton() {
+	window.location = `../mentores/mentores.html`;
+}
+
+function turmasButton() {
+	window.location = `../turmas/turmas.html`;
+}
+
+function alunosButton() {
+	window.location = `alunos.html`;
+}
+
 const alunos = (parametroAlunos) => {
     const tabla = document.querySelector('.my-table tbody')
     tabla.innerHTML = ''
