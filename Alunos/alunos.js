@@ -52,4 +52,18 @@ const carregarAlunos = async() => {
     alunos(listaAlunos)
 }
 
+const excluir = async (identificador) =>{
+	try {
+		await fetch(`https://api-final-project-pkm5.onrender.com/alunos/${identificador}`, {
+			method: 'DELETE',
+			headers: {
+				'Accept': 'application/json',
+			}
+		});
+		carregarAlunos()
+	} catch (error) {
+		console.error(error);
+	}
+};
+
 carregarAlunos()

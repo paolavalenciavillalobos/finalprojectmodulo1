@@ -38,6 +38,8 @@ formulario.addEventListener('submit', (e) =>{
     const nome = formulario.elements['nome'].value
     const email = formulario.elements['email'].value
 
+    console.log(nome)
+
     const alunoNovo = {
         nome,
         email,
