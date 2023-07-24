@@ -43,5 +43,5 @@ formulario.addEventListener('submit', (e) =>{
         email,
     }
 
-    carregarAlunos()
+    carregarAlunos(alunoNovo)
 })

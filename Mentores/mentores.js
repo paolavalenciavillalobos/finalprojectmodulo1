@@ -77,6 +77,7 @@ const excluir = async (id) =>{
 };
 
 search.addEventListener('keyup', (e) => {
+	e.preventDefault()
 	const inputData = search.value
 	console.log(inputData)
 	if (inputData === ''){

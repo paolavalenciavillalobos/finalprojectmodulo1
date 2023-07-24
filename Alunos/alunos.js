@@ -14,6 +14,14 @@ function alunosButton() {
 	window.location = `alunos.html`;
 }
 
+function editar(identificador) {
+	window.location = `editaraluno.html?id=${identificador}`
+}
+
+function addNovoAluno () {
+  window.location = 'novoaluno.html'
+}
+
 const alunos = (parametroAlunos) => {
     const tabla = document.querySelector('.my-table tbody')
     tabla.innerHTML = ''

@@ -318,6 +318,16 @@ body {
     height: 70%;
   }
   
+  .status{
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 50%;
+    /*display: flex;
+    align-content: right;
+    /*padding-left: -10%;
+    padding-right: -10%;*/
+  }
   
   
   /* Media queries para ajustar el diseño en diferentes tamaños de pantalla */
