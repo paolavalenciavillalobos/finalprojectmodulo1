@@ -15,18 +15,19 @@ function alunosButton() {
 }
 
 const formulario = document.getElementById('formulario')
+console.log(formulario)
 
 const carregarAlunos = async (parametroAluno) => {
     try {
         await fetch('https://api-final-project-pkm5.onrender.com/alunos', {
             method: 'POST',
-            Headers: {
+            headers: {
                 'Accept': 'application/json, text/plain, */*',
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(parametroAluno)
         })
-        window.location = 'alunos.html'
+       window.location = 'alunos.html'
     } catch (error) {
         console.error(error)
     }

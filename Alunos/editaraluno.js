@@ -51,7 +51,7 @@ const carregarValores = async (parametro) => {
 const parametrosId = async () => {
     searchId()
     const data = await carregarAlunos()
-    editarAluno(data)
+    carregarValores(data)
 }
 
 formulario.addEventListener('submit', (evento) => {
