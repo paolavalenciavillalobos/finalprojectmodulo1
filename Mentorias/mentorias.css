@@ -1,7 +1,5 @@
 body {
     display: flex;
-    width: 100%;
-    height: 100vh;
     margin: 0;
     padding: 0;
   }
@@ -275,14 +273,6 @@ body {
     padding-bottom: 1.5%;
   }
 
-  .my-table .centerStatus {
-    /*text-align: center;
-    padding-top: 1.5%;
-    padding-bottom: 1.5%;
-    display: flex;
-    align-content: right;
-    /*width: 10%;*/
-  }
   
   .my-table .right {
     text-align: right;
@@ -333,6 +323,7 @@ body {
     padding-bottom: 5%;
     width: 50%;
     border-radius: 12px;
+    margin: 0 auto;
   }
   
   
