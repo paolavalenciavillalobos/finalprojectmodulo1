@@ -22,6 +22,8 @@ function editar(identificador) {
 	window.location = `editarmentoria.html?id=${identificador}`
 }
 
+const search = document.getElementById('search')
+
 
 const mentorias = (parametromentores) => {
     const tabla = document.querySelector('.my-table tbody')
@@ -32,7 +34,7 @@ const mentorias = (parametromentores) => {
         <tr>
         <td class="left">${item.titulo}</td>
         <td class="center">${item.mentor.nome}</td>
-        <td class="centerStatus"><div class='status'>${item.status}</div></td>
+        <td class="center"><div class='status'>${item.status}</div></td>
         <td class="right">
           <button class="editButton"onclick="editar(${item.id})">
             <img src="https://i.ibb.co/n6sqKDC/Subtract.png" alt="Subtract">
@@ -62,8 +64,14 @@ const statusDiv = () => {
   });
 }
 
-const carregarTodosOsDados = async () => {
-    const response = await fetch ('https://api-final-project-pkm5.onrender.com/mentorias')
+const carregarTodosOsDados = async (parametroNãoObrigatorio = null) => {
+  let inputText = ''
+	if(parametroNãoObrigatorio){
+		inputText = `?q=${parametroNãoObrigatorio}`
+		console.log(inputText)
+	}
+
+  const response = await fetch (`https://api-final-project-pkm5.onrender.com/mentorias${inputText}`)
     const todosOsDados = await response.json()
     mentorias(todosOsDados)
     statusDiv()
@@ -83,6 +91,16 @@ const excluir = async (identificador) =>{
 	}
 };
 
-
+search.addEventListener('keyup', (e) => {
+	e.preventDefault()
+	const inputData = search.value
+	console.log(inputData)
+	if (inputData === ''){
+		carregarTodosOsDados()
+	}
+	else if(e.key === 'Enter'){
+		carregarTodosOsDados(inputData)
+	}
+})
 
 carregarTodosOsDados()

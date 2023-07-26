@@ -14,6 +14,10 @@ function alunosButton() {
 	window.location = `../alunos/alunos.html`;
 }
 
+function back() {
+	window.location = "turmas.html";
+}
+
 const formulario = document.getElementById('formulario')
 
 let id;

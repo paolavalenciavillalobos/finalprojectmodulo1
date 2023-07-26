@@ -7,10 +7,10 @@
 }
 
 #container {
-    width: 400px;
+    width: 33%;
     flex-direction: column;
     justify-content: center;
-    margin-top: 15%;
+    margin-top: 7%;
 
 
 }

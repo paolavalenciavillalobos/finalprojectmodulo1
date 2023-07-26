@@ -22,6 +22,8 @@ const editar = (identificador) => {
 	window.location = `editarturma.html?id=${identificador}`
 }
 
+const search = document.getElementById('search')
+
 const excluir = async (identificador) =>{
 	try {
 		await fetch(`https://api-final-project-pkm5.onrender.com/turmas/${identificador}`, {
@@ -65,10 +67,28 @@ const turmasTabela = (parametroTurmas) => {
     });
 }
 
-const carregarTurmas = async () => {
-    const response = await fetch ('https://api-final-project-pkm5.onrender.com/turmas')
+const carregarTurmas = async (parametroNãoObrigatorio = null) => {
+  let inputText = ''
+	if(parametroNãoObrigatorio){
+		inputText = `?q=${parametroNãoObrigatorio}`
+		console.log(inputText)
+	}
+
+    const response = await fetch (`https://api-final-project-pkm5.onrender.com/turmas${inputText}`)
     const todasAsTurmas = await response.json()
     turmasTabela(todasAsTurmas)
 }
+
+search.addEventListener('keyup', (e) => {
+	e.preventDefault()
+	const inputData = search.value
+	console.log(inputData)
+	if (inputData === ''){
+		carregarTurmas()
+	}
+	else if(e.key === 'Enter'){
+		carregarTurmas(inputData)
+	}
+})
 
 carregarTurmas()

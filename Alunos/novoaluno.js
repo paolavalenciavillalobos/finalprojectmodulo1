@@ -14,6 +14,10 @@ function alunosButton() {
 	window.location = `alunos.html`;
 }
 
+function back() {
+	window.location = "alunos.html";
+}
+
 const formulario = document.getElementById('formulario')
 console.log(formulario)
 

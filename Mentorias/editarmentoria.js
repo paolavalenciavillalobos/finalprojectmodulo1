@@ -1,3 +1,23 @@
+function mentoriasButton() {
+	window.location = `mentorias.html`;
+}
+
+function mentoresButton() {
+	window.location = `../mentores/mentores.html`;
+}
+
+function turmasButton() {
+	window.location = `../turmas/turmas.html`;
+}
+
+function alunosButton() {
+	window.location = `../alunos/alunos.html`;
+}
+
+function back() {
+	window.location = "mentorias.html";
+}
+
 const formulario = document.getElementById('formulario')
 
 let id;

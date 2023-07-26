@@ -22,6 +22,8 @@ function addNovoAluno () {
   window.location = 'novoaluno.html'
 }
 
+const search = document.getElementById('search')
+
 const alunos = (parametroAlunos) => {
     const tabla = document.querySelector('.my-table tbody')
     tabla.innerHTML = ''
@@ -46,8 +48,14 @@ const alunos = (parametroAlunos) => {
     });
 }
 
-const carregarAlunos = async() => {
-    const response = await fetch (`https://api-final-project-pkm5.onrender.com/alunos`)
+const carregarAlunos = async(parametroNãoObrigatorio = null) => {
+  let inputText = ''
+	if(parametroNãoObrigatorio){
+		inputText = `?q=${parametroNãoObrigatorio}`
+		console.log(inputText)
+	}
+
+    const response = await fetch (`https://api-final-project-pkm5.onrender.com/alunos${inputText}`)
     const listaAlunos = await response.json()
     alunos(listaAlunos)
 }
@@ -65,5 +73,17 @@ const excluir = async (identificador) =>{
 		console.error(error);
 	}
 };
+
+search.addEventListener('keyup', (e) => {
+	e.preventDefault()
+	const inputData = search.value
+	console.log(inputData)
+	if (inputData === ''){
+		carregarAlunos()
+	}
+	else if(e.key === 'Enter'){
+		carregarAlunos(inputData)
+	}
+})
 
 carregarAlunos()

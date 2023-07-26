@@ -14,6 +14,10 @@ function alunosButton() {
 	window.location = `../alunos/alunos.html`;
 }
 
+function back() {
+	window.location = "mentorias.html";
+}
+
 const formulario = document.getElementById('formulario')
 
 const buscarMentor = async (id) => {
