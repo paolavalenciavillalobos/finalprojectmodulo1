@@ -1,5 +1,5 @@
 function mentoriasButton() {
-	window.location = `../mentorias/mentorias.html`;
+	window.location = `Mentorias/mentorias.html`;
 }
 
 function mentoresButton() {
@@ -7,11 +7,11 @@ function mentoresButton() {
 }
 
 function turmasButton() {
-	window.location = `../turmas/turmas.html`;
+	window.location = `Turmas/turmas.html`;
 }
 
 function alunosButton() {
-	window.location = `../alunos/alunos.html`;
+	window.location = `Alunos/alunos.html`;
 }
 
 

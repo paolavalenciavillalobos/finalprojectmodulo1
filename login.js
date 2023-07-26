@@ -1,5 +1,5 @@
 function entrar() {
-	window.location = `../finalprojectmodulo1/mentores/mentores.html`;
+	window.location = `Mentores/mentores.html`;
 }
 
 const formulario = document.getElementById('formulario')
