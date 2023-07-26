@@ -218,6 +218,12 @@ body {
     border: 2px solid #E0E0E0;
     padding: 4%;
   }
+
+  #selectMentorias{
+    border-radius: 16px;
+    border: 2px solid #E0E0E0;
+    padding: 4%;
+  }
   
   #buttonAction {
     width: 100%;

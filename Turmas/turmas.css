@@ -281,6 +281,14 @@ body {
     padding-top: 1.5%;
     padding-bottom: 1.5%;
   }
+
+  .my-table .rightButton {
+    text-align: right;
+    padding-right: 3%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    width: 10%;
+  }
   
   tr:nth-child(even){
     background-color: #E0E0E0;
@@ -296,7 +304,6 @@ body {
   border-color: red;
   border: 10px;
   padding: 2%;
-  
   }
   
   .my-table .editButton img{
@@ -310,7 +317,6 @@ body {
     border-color: #E0E0E0;
     border: 1px;
     padding: 1.8%;
-   
   }
   
   .my-table .deleteButton img{

@@ -32,7 +32,7 @@ const mentorias = (parametromentores) => {
         <tr>
         <td class="left">${item.titulo}</td>
         <td class="center">${item.mentor.nome}</td>
-        <td class="center"><div class='status'>${item.status}</div></td>
+        <td class="centerStatus"><div class='status'>${item.status}</div></td>
         <td class="right">
           <button class="editButton"onclick="editar(${item.id})">
             <img src="https://i.ibb.co/n6sqKDC/Subtract.png" alt="Subtract">

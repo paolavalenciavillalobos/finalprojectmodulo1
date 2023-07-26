@@ -169,7 +169,19 @@ body {
     padding: 1%;
   
   }
+
+  #turmaBloco{
+    display: flex;
+    align-content: inline;
+    padding: 2%;
+  }
   
+  select{
+    border-radius: 16px;
+    border: 2px solid #E0E0E0;
+    padding: 4%;
+  }
+
   .dadosTitle {
     border-bottom: 1.5px solid #BDBDBD;
     color: #482D83;

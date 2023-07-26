@@ -274,6 +274,14 @@ body {
     padding-top: 1.5%;
     padding-bottom: 1.5%;
   }
+
+  .my-table .centerStatus {
+    text-align: center;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    display: flex;
+    align-content: center;
+  }
   
   .my-table .right {
     text-align: right;
@@ -323,10 +331,6 @@ body {
     padding-top: 5%;
     padding-bottom: 5%;
     width: 50%;
-    /*display: flex;
-    align-content: right;
-    /*padding-left: -10%;
-    padding-right: -10%;*/
   }
   
   

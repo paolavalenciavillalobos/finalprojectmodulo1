@@ -17,6 +17,34 @@ function alunosButton() {
 const formulario = document.getElementById('formulario')
 console.log(formulario)
 
+const buscarMentoria = async (id) => {
+    if(id == null){
+        return false
+    }
+    const response = await fetch (`https://api-final-project-pkm5.onrender.com/mentorias/${id}`)
+    const mentoria = await response.json()
+    return mentoria
+}
+
+const buscarMentorias = async () => {
+    const response = await fetch (`https://api-final-project-pkm5.onrender.com/mentorias/`)
+    const mentorias = await response.json()
+    return mentorias
+}
+
+const mentoriasSelect = async() => {
+    const listaDeMentorias = await buscarMentorias()
+    console.log(buscarMentorias)
+    const mentoriasFormulario = document.getElementById('selectMentorias')
+
+    listaDeMentorias.forEach(item => {
+        const option = new Option (item.titulo , item.id)
+        mentoriasFormulario.options.add(option)
+    });
+    console.log(mentoriasFormulario)
+    console.log(mentoriasSelect)
+}
+
 const carregarAlunos = async (parametroAluno) => {
     try {
         await fetch('https://api-final-project-pkm5.onrender.com/alunos', {
@@ -33,18 +61,27 @@ const carregarAlunos = async (parametroAluno) => {
     }
 }
 
-formulario.addEventListener('submit', (e) =>{
+formulario.addEventListener('submit', async(e) =>{
     e.preventDefault()
 
     const nome = formulario.elements['nome'].value
     const email = formulario.elements['email'].value
+    const mentoria = formulario.elements['selectMentorias'].value
 
     console.log(nome)
+
+    const mentoriaObjeto = await buscarMentoria(mentoria)
 
     const alunoNovo = {
         nome,
         email,
+        mentoria:{
+            titulo: mentoriaObjeto.titulo,
+            id: mentoriaObjeto.id
+        }
     }
 
     carregarAlunos(alunoNovo)
 })
+
+mentoriasSelect()

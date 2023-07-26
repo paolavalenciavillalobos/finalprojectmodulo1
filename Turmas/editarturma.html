@@ -21,20 +21,20 @@
 
 
     <div id="menu">
-    <div id="logo">
-      <img src="https://i.ibb.co/QPm39fQ/mentorclass.png" id="mentorClass" width="100%" height="50%" />
-    </div>
-    <button class="menuText" onclick="mentoresButton()"> 
-      <img src="https://i.ibb.co/XJk7P80/User.png" alt="User" />
-      Mentores</button>
-    <button class="menuText" onclick="mentoriasButton()"><img src="https://i.ibb.co/j6NWz8F/notebook-and-pen.png" alt="notebook-and-pen" width="20%"
-        height="100%" />Mentorias</button>
-    <button class="menuText" onclick="turmasButton()"><img src="https://i.ibb.co/BtKzc8p/playback-progress.png" alt="playback-progress"
-        width="20%" height="100%" />Turmas</button>
-    <button class="menuText" onclick="alunosButton()"><img src="https://i.ibb.co/KDJHT74/every-user.png" alt="every-user" width="20%"
-        height="100%" />Alumnos</button>
+        <div id="logo">
+            <img src="https://i.ibb.co/QPm39fQ/mentorclass.png" id="mentorClass" width="100%" height="50%" />
+        </div>
+        <button class="menuText" onclick="mentoresButton()">
+            <img src="https://i.ibb.co/XJk7P80/User.png" alt="User" />
+            Mentores</button>
+        <button class="menuText" onclick="mentoriasButton()"><img src="https://i.ibb.co/j6NWz8F/notebook-and-pen.png"
+                alt="notebook-and-pen" width="20%" height="100%" />Mentorias</button>
+        <button class="menuText" onclick="turmasButton()"><img src="https://i.ibb.co/BtKzc8p/playback-progress.png"
+                alt="playback-progress" width="20%" height="100%" />Turmas</button>
+        <button class="menuText" onclick="alunosButton()"><img src="https://i.ibb.co/KDJHT74/every-user.png"
+                alt="every-user" width="20%" height="100%" />Alumnos</button>
 
-  </div>
+    </div>
 
     <div id="cantoDireito">
 
@@ -64,49 +64,56 @@
 
             <p class="dadosTitle">Mentoria</p>
             <form id="formulario">
-                <div id="novosDados">
-                    <div class="inputDados">
-                        <label>Mentores</label>
-                        <select id="selectMentores"></select>
+                <div>
+                    <div id="novosDados">
+                        <div class="inputDados">
+                            <label>Mentores</label>
+                            <select id="selectMentores"></select>
+                        </div>
+                        <div class="inputDados">
+                            <label>Mentorias</label>
+                            <select id="selectMentorias"></select>
+                        </div>
                     </div>
-                    <div class="inputDados">
-                        <label>Mentorias</label>
-                        <select id="selectMentorias"></select>
+                    <div id="novosDados">
+                        <div class="inputDados">
+                            <label>Data de inicio</label>
+                            <input id="data">
+                        </div>
+                        <div class="inputDados">
+                            <label>Dia da semana</label>
+                            <select id="selectSemana">
+                                <option>segunda</option>
+                                <option>terça</option>
+                                <option>quinta</option>
+                            </select>
+                        </div>
+                        <div class="inputDados">
+                            <label>Hora de inicio</label>
+                            <input id="horaInicio">
+                        </div>
+                        <div class="inputDados">
+                            <label>Hora de fim</label>
+                            <input id="horaFim">
+                        </div>
+
                     </div>
-                </div>
-                <div id="novosDados">
-                    <div class="inputDados">
-                        <label>Data de inicio</label>
-                        <input id="data">
-                    </div>
-                    <div class="inputDados">
-                        <label>Dia da semana</label>
-                        <select id="selectSemana">
-                        <option>segunda</option>
-                        <option>terça</option>
-                        <option>quinta</option>
-                    </select>
-                    </div>
-                    <div class="inputDados">
-                        <label>Hora de inicio</label>
-                        <input id="horaInicio">
-                    </div>
-                    <div class="inputDados">
-                        <label>Hora de fim</label>
-                        <input id="horaFim">
-                    </div>
+
                     <p class="dadosTitle">Turma</p>
-                    <div class="inputDados">
-                        <label>Turma</label>
-                        <input id="turma">
-                    </div>
-                    <div class="inputDados">
-                        <label>Link da aula</label>
-                        <input id="link">
-                    </div>
-                    <div class="inputDados">
-                        <label>Qtd de encontros</label>
-                        <input id="encontros">
+
+                    <div id="turmaBloco">
+                        <div class="inputDados">
+                            <label>Turma</label>
+                            <input id="turma">
+                        </div>
+                        <div class="inputDados">
+                            <label>Link da aula</label>
+                            <input id="link">
+                        </div>
+                        <div class="inputDados">
+                            <label>Qtd de encontros</label>
+                            <input id="encontros">
+                        </div>
                     </div>
                 </div>
 
