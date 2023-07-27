@@ -3,15 +3,15 @@ function mentoriasButton() {
 }
 
 function mentoresButton() {
-	window.location = `../mentores/mentores.html`;
+	window.location = `Mentores/mentores.html`;
 }
 
 function turmasButton() {
-	window.location = `../turmas/turmas.html`;
+	window.location = `Turmas/turmas.html`;
 }
 
 function alunosButton() {
-	window.location = `../alunos/alunos.html`;
+	window.location = `Alunos/alunos.html`;
 }
 
 function back() {
@@ -38,21 +38,6 @@ const buscarMentor = async (id) => {
     return mentor
 }
 
-function mentoriasButton() {
-	window.location = `mentorias.html`;
-}
-
-function mentoresButton() {
-	window.location = `../mentores/mentores.html`;
-}
-
-function turmasButton() {
-	window.location = `../turmas/turmas.html`;
-}
-
-function alunosButton() {
-	window.location = `../alunos/alunos.html`;
-}
 
 const buscarMentores = async () => {
     const response = await fetch (`https://api-final-project-pkm5.onrender.com/mentores/`)
