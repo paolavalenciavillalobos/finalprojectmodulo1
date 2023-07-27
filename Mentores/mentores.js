@@ -1,5 +1,5 @@
 function mentoriasButton() {
-	window.location = `Mentorias/mentorias.html`;
+	window.location = `../Mentorias/mentorias.html`;
 }
 
 function mentoresButton() {
