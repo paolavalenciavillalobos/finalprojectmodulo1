@@ -187,14 +187,13 @@ body {
     display: flex;
     flex-direction: row;
     width: 100%;
-    margin-bottom: 2%;
+    margin-bottom: 0%;
     padding: 1%;
   }
   
   .inputDados {
     display: flex;
     flex-direction: column;
-    padding: 0;
     width: 30%;
     padding-right: 3%;
   }
@@ -216,6 +215,44 @@ body {
     border: 2px solid #E0E0E0;
     padding: 4%;
   }
+  
+  #selectMentores {
+    border-radius: 16px;
+    border: 2px solid #E0E0E0;
+    padding: 4%;
+  }
+  
+  #statusLabel{
+    color: #757575;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0.20000000298023224px;
+  }
+  
+  #checkbox {
+    margin-left: 1.5%;
+    padding-bottom: 3%;
+    width: 100%;
+  }
+  
+  .form-check-input:checked {
+    background-color: #00C247;
+    border-color: #00C247;
+  }
+  
+  .form-check-label {
+    color: #212121;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.20000000298023224px;
+  
+  }
+  
+  
   
   #buttonAction {
     width: 100%;
