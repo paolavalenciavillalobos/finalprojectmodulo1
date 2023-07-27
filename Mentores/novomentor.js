@@ -1,17 +1,17 @@
 function mentoriasButton() {
-	window.location = `Mentorias/mentorias.html`;
+	window.location = `../Mentorias/mentorias.html`;
 }
 
 function mentoresButton() {
-	window.location = `Mentores.html`;
+	window.location = `mentores.html`;
 }
 
 function turmasButton() {
-	window.location = `Turmas/turmas.html`;
+	window.location = `../Turmas/turmas.html`;
 }
 
 function alunosButton() {
-	window.location = `Alunos/alunos.html`;
+	window.location = `../Alunos/alunos.html`;
 }
 
 function back() {

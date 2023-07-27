@@ -7,11 +7,11 @@ function mentoresButton() {
 }
 
 function turmasButton() {
-	window.location = `Turmas/turmas.html`;
+	window.location = `../Turmas/turmas.html`;
 }
 
 function alunosButton() {
-	window.location = `Alunos/alunos.html`;
+	window.location = `../Alunos/alunos.html`;
 }
 
 

@@ -1,9 +1,9 @@
 function mentoriasButton() {
-	window.location = `Mentorias/mentorias.html`;
+	window.location = `../Mentorias/mentorias.html`;
 }
 
 function mentoresButton() {
-	window.location = `Mentores/mentores.html`;
+	window.location = `../Mentores/mentores.html`;
 }
 
 function turmasButton() {
@@ -11,7 +11,7 @@ function turmasButton() {
 }
 
 function alunosButton() {
-	window.location = `Alunos/alunos.html`;
+	window.location = `../Alunos/alunos.html`;
 }
 
 function back() {

@@ -3,15 +3,15 @@ function mentoriasButton() {
 }
 
 function mentoresButton() {
-	window.location = `Mentores/mentores.html`;
+	window.location = `../Mentores/mentores.html`;
 }
 
 function turmasButton() {
-	window.location = `Turmas/turmas.html`;
+	window.location = `../Turmas/turmas.html`;
 }
 
 function alunosButton() {
-	window.location = `Alunos/alunos.html`;
+	window.location = `../Alunos/alunos.html`;
 }
 
 function addNovaMentoria () {
