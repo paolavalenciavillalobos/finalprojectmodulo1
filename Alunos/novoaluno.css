@@ -1,136 +1,128 @@
 body {
+  min-height: 100%;
     display: flex;
-    width: 100%;
-    height: 100vh;
     margin: 0;
     padding: 0;
   }
-  
-  #menu {
-    display: flex;
-    flex-direction: column;
-    width: 15%;
-    min-width: 150px;
-    background: #482D83;
-    position: relative;
-  }
-  
-  #logo {
-    height: 12.5vh;
-    margin: 10%;
-    padding-top: 17%;
-  }
-  
-  .menuText {
-    display: flex;
-    align-items: center;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: 0.2px;
-    color: white;
-    background-color: #482D83;
-    border: none;
-    border-radius: 10px;
-    padding: 4%;
-    margin-left: 4%;
-    margin-right: 4%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    cursor: pointer;
-  }
-  
-  .menuText:hover {
-    background-color: #6548a6;
-  }
-  
-  .menuText img {
-    margin-right: 4%;
-    width: 12%;
-    height: 100%;
-  }
-  
-  #cantoDireito {
-    flex: 1;
-    /* Ocupa el espacio restante */
-    display: flex;
-    flex-direction: column;
-  }
-  
-  #topo {
-    height: 12.5vh;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  
-  }
-  
-  #usuario {
-    margin-top: 5%;
-    margin-right: 2%;
-    padding: 1%;
-    display: flex;
-    width: 30%;
-    justify-content: flex-end;
-  }
-  
-  
-  #userIcon {
-  
-    background: #482D83;
-    border-radius: 50%;
-    width: 100%;
-    height: 100%;
-    /*margin: 2%;
-      margin-left: 1%;
-      margin-right: 1%;*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /*padding: 12px;*/
-  }
-  
-  #user {
-  
-    width: 50%;
-    height: 50%;
-    padding: 0%;
-    margin: 0%;
-    display: flex;
-    align-items: center;
-  }
-  
-  #dados {
-    margin-left: 3%;
-  }
-  
-  #userName {
-  
-    padding: 0%;
-    margin: 0%;
-    font-family: 'Sora', sans-serif;
-    font-size: 90%;
-    font-weight: 600;
-    /*line-height: 28px;*/
-    letter-spacing: 0.20000000298023224px;
-    color: #212121;
-  
-  
-  }
-  
-  #userMail {
-    padding: 0%;
-    margin: 0%;
-    font-family: 'Poppins', sans-serif;
-    font-size: 60%;
-    font-weight: 500;
-    /*line-height: 24px;*/
-    letter-spacing: 0.20000000298023224px;
-    color: #757575;
-  
-  
-  }
+
+
+#menu {
+  display: flex;
+  flex-direction: column;
+  width: 18%;
+  min-width: 150px;
+  background: #482D83;
+  position: relative;
+  min-height: 100vh;
+}
+
+#logo {
+  height: 12.5vh;
+  margin: 10%;
+  padding-top: 17%;
+}
+
+.menuText {
+  display: flex;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+  color: white;
+  background-color: #482D83;
+  border: none;
+  border-radius: 10px;
+  padding: 4%;
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  cursor: pointer;
+}
+
+.menuText:hover {
+  background-color: #6548a6;
+}
+
+.menuText img {
+  margin-right: 4%;
+  width: 12%;
+  height: 100%;
+}
+
+#cantoDireito {
+  width: 100%;
+}
+
+#topo {
+  height: 12.5vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+
+#usuario {
+  margin-top: 5%;
+  margin-right: 2%;
+  padding: 1%;
+  display: flex;
+  width: 30%;
+  justify-content: flex-end;
+}
+
+
+#userIcon {
+
+  background: #482D83;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#user {
+
+  width: 50%;
+  height: 50%;
+  padding: 0%;
+  margin: 0%;
+  display: flex;
+  align-items: center;
+}
+
+#dados {
+  margin-left: 3%;
+}
+
+#userName {
+
+  padding: 0%;
+  margin: 0%;
+  font-family: 'Sora', sans-serif;
+  font-size: 90%;
+  font-weight: 600;
+  letter-spacing: 0.20000000298023224px;
+  color: #212121;
+
+
+}
+
+#userMail {
+  padding: 0%;
+  margin: 0%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 60%;
+  font-weight: 700;
+  letter-spacing: 0.20000000298023224px;
+  color: #757575;
+
+
+}
   
   #title {
     height: 10vh;

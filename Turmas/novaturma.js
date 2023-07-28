@@ -91,7 +91,7 @@ const novaTurma = async (turmaParametro) => {
 formulario.addEventListener('submit', async (e) => {
     e.preventDefault()
 
-    const mentores = formulario.elements['selectMentores'].value
+    const mentores = formulario.elements ['selectMentores'].value
     const mentorias = formulario.elements['selectMentorias'].value
     const data = formulario.elements['data'].value
     const semana = formulario.elements['selectSemana'].value
@@ -99,6 +99,7 @@ formulario.addEventListener('submit', async (e) => {
     const horaFinal = formulario.elements['horaFim'].value
     const titulo = formulario.elements['turma'].value
     const encontros = formulario.elements['encontros'].value
+    const link = formulario.elements['link'].value
 
     const mentorObjeto = await carregarMentor(mentores)
     const mentoriasObjeto = await carregarMentoria(mentorias)
@@ -117,7 +118,8 @@ formulario.addEventListener('submit', async (e) => {
         horaInicio,
         horaFinal,
         titulo,
-        encontros
+        encontros,
+        link,
     }
     novaTurma(newTurma)
 }

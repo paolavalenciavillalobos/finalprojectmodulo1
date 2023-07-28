@@ -3,21 +3,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
 
 }
 
 #container {
-    width: 41%;
-    flex-direction: column;
-    justify-content: center;
+    width: 33%;
+    height: 100%;
     margin-top: 7%;
+    margin: 0 auto;
 }
 
 
 #title {
     font-size: 36px;
     color: #212121;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 50px;
     margin-top: 0%;
     padding-top: 0%;
@@ -38,46 +39,34 @@
 
 .bloco {
     width: 100%;
-    height: 80%;
+    height: 100%;
     margin-top: 3%;
 }
 
-#senha {
-    border-radius: 16px;
-}
-
-#email {
-    border-radius: 16px;
-}
 
 input {
     width: 100%;
-    height: 56px;
-    margin-top: 5px;
+    height: 10vh;
+    margin-top: 2%;
+    border-color:#BDBDBD;
+    border-radius: 16px;
 
 }
 
-label {
-    /*width: Hug (54px);
-    height: Hug (22px);
-    top: -1px;
-    padding: 1px 4px 1px 4px;
-    gap: 10px;*/
-
-}
 
 #box {
     display: flex;
     justify-content: space-between;
     font-family: 'Poppins', sans-serif;
-    margin-top: 10px;
+    margin-top: 2%;
+    margin-bottom: 8%;
+    width: 100%;
+    
 }
 
 #esqueci {
-    width: 175px;
-    height: 24px;
     color: #616161;
-    font-family: Poppins;
+    font-family: 'Poppins';
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -85,9 +74,13 @@ label {
 
 }
 
+.form-check-label{
+    font-weight: 800;
+}
+
 button {
-    width: 400px;
-    height: 56px;
+    width: 100%;
+    height: 10vh;
     background: #482D83;
     border-radius: 16px;
     font-size: 16px;
@@ -96,6 +89,7 @@ button {
     letter-spacing: 0.20000000298023224px;
     font-family: 'Poppins';
     color: #FFFFFF;
-    margin-top: 40px;
+    margin-top: 2%;
+    border: none;
 
 }

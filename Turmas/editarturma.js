@@ -110,6 +110,7 @@ const valoresTurma = async (parametroValores) => {
     document.getElementById('horaFim').value = parametroValores.horaFinal
     document.getElementById('turma').value = parametroValores.titulo
     document.getElementById('encontros').value = parametroValores.encontros
+    document.getElementById('link').value = parametroValores.link
 }
 
 const atualizarDadosProntos = async () => {
@@ -130,6 +131,7 @@ formulario.addEventListener('submit', async (e) => {
     const horaFinal = formulario.elements['horaFim'].value
     const titulo = formulario.elements['turma'].value
     const encontros = formulario.elements['encontros'].value
+    const link = formulario.elements['link'].value
 
     const mentorObjeto = await buscarMentor(mentores)
     const mentoriasObjeto = await buscarMentoria(mentorias)
@@ -148,7 +150,8 @@ formulario.addEventListener('submit', async (e) => {
         horaInicio,
         horaFinal,
         titulo,
-        encontros
+        encontros,
+        link
     }
     editarTurma(editTurma)
 }

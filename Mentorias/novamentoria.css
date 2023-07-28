@@ -1,16 +1,19 @@
 body {
+  min-height: 100%;
     display: flex;
     margin: 0;
     padding: 0;
   }
 
+
 #menu {
   display: flex;
   flex-direction: column;
-  width: 15%;
+  width: 18%;
   min-width: 150px;
   background: #482D83;
   position: relative;
+  min-height: 100vh;
 }
 
 #logo {
@@ -50,10 +53,7 @@ body {
 }
 
 #cantoDireito {
-  flex: 1;
-  /* Ocupa el espacio restante */
-  display: flex;
-  flex-direction: column;
+  width: 100%;
 }
 
 #topo {
@@ -80,13 +80,9 @@ body {
   border-radius: 50%;
   width: 100%;
   height: 100%;
-  /*margin: 2%;
-      margin-left: 1%;
-      margin-right: 1%;*/
   display: flex;
   align-items: center;
   justify-content: center;
-  /*padding: 12px;*/
 }
 
 #user {
@@ -110,7 +106,6 @@ body {
   font-family: 'Sora', sans-serif;
   font-size: 90%;
   font-weight: 600;
-  /*line-height: 28px;*/
   letter-spacing: 0.20000000298023224px;
   color: #212121;
 
@@ -122,7 +117,7 @@ body {
   margin: 0%;
   font-family: 'Poppins', sans-serif;
   font-size: 60%;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 0.20000000298023224px;
   color: #757575;
 
