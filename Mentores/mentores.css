@@ -1,9 +1,9 @@
 body {
   min-height: 100%;
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
 
 
 #menu {
@@ -142,7 +142,7 @@ body {
 }
 
 #pesquisa {
-  height: 12vh; 
+  height: 12vh;
   padding: 1%;
   display: flex;
   justify-content: space-between;
@@ -214,7 +214,7 @@ body {
 
 .my-table {
   width: 100%;
-  border-radius: 24px;
+  /*border-radius: 24px;*/
   /*border-radius: 4%/4%;*/
   padding: 0%;
   font-family: 'Poppins', sans-serif;
@@ -225,7 +225,6 @@ body {
   overflow: hidden;
   border-collapse: separate;
   border-spacing: 0px 5px;
-
 }
 
 .my-table th {
@@ -233,11 +232,11 @@ body {
   color: #FFFFFF;
 }
 
-.my-table td{
+.my-table td {
   color: #212121;
-font-weight: 600;
-line-height: 24px;
-letter-spacing: 0.20000000298023224px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.20000000298023224px;
 
 
 }
@@ -270,38 +269,57 @@ letter-spacing: 0.20000000298023224px;
   padding-bottom: 1.5%;
 }
 
-tr:nth-child(even){
+.my-table .topright {
+  border-top-right-radius: 16px;
+}
+
+.my-table .topleft {
+  border-top-left-radius: 16px;
+}
+
+.my-table .bottomright{
+  border-bottom-right-radius: 16px;
+}
+
+.my-table .bottomleft{
+  border-bottom-left-radius: 16px;
+}
+
+
+
+tr:nth-child(even) {
   background-color: #E0E0E0;
 }
 
-tr:nth-child(odd){
-  background-color:  #FAFAFA;
+tr:nth-child(odd) {
+  background-color: #FAFAFA;
 }
 
-.my-table .editButton{
-background-color: white;
-border-radius: 50%;
-border-color: red;
-border: 10px;
-padding: 2%;
-
+.my-table .editButton {
+  background-color: white;
+  border-radius: 50%;
+  border-color: #E0E0E0;
+  border-width: 1.3px;
+  border-style: solid;
+  padding: 2%;
 }
 
-.my-table .editButton img{
+.my-table .editButton img {
   width: 70%;
   height: 70%;
 }
 
-.my-table .deleteButton{
+.my-table .deleteButton {
   background-color: white;
   border-radius: 50%;
   border-color: #E0E0E0;
-  border: 1px;
-  padding: 1.8%;
- 
+  border-width: 1px;
+  border-style: solid;
+  padding: 1.9%;
+
 }
 
-.my-table .deleteButton img{
+.my-table .deleteButton img {
   width: 70%;
   height: 70%;
 }
@@ -320,7 +338,7 @@ padding: 2%;
     min-width: 0;
     max-height: 20vh;
   }
-  
+
 
   #cantoDireito {
     width: 100%;

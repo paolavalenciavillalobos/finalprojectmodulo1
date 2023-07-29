@@ -27,13 +27,20 @@ const search = document.getElementById('search')
 const alunos = (parametroAlunos) => {
     const tabla = document.querySelector('.my-table tbody')
     tabla.innerHTML = ''
-    parametroAlunos.forEach(item => {
+	const contarAlunos = parametroAlunos.length
+    parametroAlunos.forEach((item, index) => {
+		let left = ""
+		let right = ""
+		if(contarAlunos === index + 1){
+			left = 'bottomleft'
+			right = 'bottomright'
+		}
         const alunosHtml =
         `
         <tr>
-        <td class="left">${item.nome}</td>
+        <td class="left ${left}">${item.nome}</td>
         <td class="center">${item.email}</td>
-        <td class="right">
+        <td class="right ${right}">
           <button class="editButton"onclick="editar(${item.id})">
             <img src="https://i.ibb.co/n6sqKDC/Subtract.png" alt="Subtract">
           </button>

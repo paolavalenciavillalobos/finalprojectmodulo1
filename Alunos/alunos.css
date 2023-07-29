@@ -216,7 +216,6 @@ body {
   
   .my-table {
     width: 100%;
-    /*border-radius: 16px;*/
     border-radius: 4%/4%;
     padding: 0%;
     font-family: 'Poppins', sans-serif;
@@ -271,6 +270,22 @@ body {
     padding-top: 1.5%;
     padding-bottom: 1.5%;
   }
+
+  .my-table .topright {
+    border-top-right-radius: 16px;
+  }
+  
+  .my-table .topleft {
+    border-top-left-radius: 16px;
+  }
+  
+  .my-table .bottomright{
+    border-bottom-right-radius: 16px;
+  }
+  
+  .my-table .bottomleft{
+    border-bottom-left-radius: 16px;
+  }
   
   tr:nth-child(even){
     background-color: #E0E0E0;
@@ -280,28 +295,29 @@ body {
     background-color:  #FAFAFA;
   }
   
-  .my-table .editButton{
+  .my-table .editButton {
   background-color: white;
   border-radius: 50%;
-  border-color: red;
-  border: 10px;
+  border-color: #E0E0E0;
+  border-width: 1.3px;
+  border-style: solid;
   padding: 2%;
-  
-  }
+}
   
   .my-table .editButton img{
     width: 70%;
     height: 70%;
   }
   
-  .my-table .deleteButton{
-    background-color: white;
-    border-radius: 50%;
-    border-color: #E0E0E0;
-    border: 1px;
-    padding: 1.8%;
-   
-  }
+  .my-table .deleteButton {
+  background-color: white;
+  border-radius: 50%;
+  border-color: #E0E0E0;
+  border-width: 1px;
+  border-style: solid;
+  padding: 1.9%;
+
+}
   
   .my-table .deleteButton img{
     width: 70%;
