@@ -63,9 +63,6 @@ const excluirUser = async (id) =>{
 const formulario = document.getElementById('formulario')
 
 const carregarMentor = async (id) => {
-    if (id == null) {
-        return false
-    }
     const response = await fetch(`https://api-final-project-pkm5.onrender.com/mentores/${id}`)
     const mentor = await response.json()
     return mentor

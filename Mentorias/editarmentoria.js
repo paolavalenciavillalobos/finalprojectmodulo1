@@ -60,10 +60,13 @@ const excluirUser = async (id) =>{
 	}
 };
 
+//Pegar o formulario desde o Id no html
 const formulario = document.getElementById('formulario')
 
+//declarar una variavel global para guardar a informação
 let id;
 
+//usar um id unico na url para cada objeto modificavel da API
 const urlId = async () => {
     const parametroUrl = window.location.search
     const getParametro = new URLSearchParams (parametroUrl)
@@ -72,9 +75,6 @@ const urlId = async () => {
 }
 
 const buscarMentor = async (id) => {
-    if(id == null){
-        return false
-    }
     const response = await fetch (`https://api-final-project-pkm5.onrender.com/mentores/${id}`)
     const mentor = await response.json()
     return mentor
@@ -98,6 +98,7 @@ const mentoresSelect = async() => {
     console.log(mentoresFormulario)
 }
 
+//carregar a informção da API
 const carregarMentorias = async () => {
     const response = await fetch(`https://api-final-project-pkm5.onrender.com/mentorias/${id}`)
     const mentoria = await response.json()
@@ -105,6 +106,7 @@ const carregarMentorias = async () => {
     return mentoria
 }
 
+//Editar a informação da API
 const editarMentorias = async (mentoria) => {
     await fetch(`https://api-final-project-pkm5.onrender.com/mentorias/${id}`, {
         method: 'PUT',
@@ -117,19 +119,21 @@ const editarMentorias = async (mentoria) => {
     window.location = 'mentorias.html'
 }
 
+//Carregar os valores da API no input
 const editarFormularioMentorias = async (parametroeditar) => {
     document.getElementById('mentoria').value = parametroeditar.titulo
     document.getElementById('selectMentores').value = parametroeditar.mentor.id
 }
 
-
+//função para preencher os dados certos
 const atualizarDadosProntos = async () => {
-    urlId()
+    urlId()//chama o ID da mentoria
     console.log(id)
-    const mentoriaEditada = await carregarMentorias()
-    editarFormularioMentorias(mentoriaEditada)
+    const mentoriaEditada = await carregarMentorias() //carrega a info das mentorias
+    editarFormularioMentorias(mentoriaEditada)//passa a informação das mentorias na função
 }
 
+//finalmente atualizar os dados na api
 formulario.addEventListener('submit', async(e) => {
     e.preventDefault()
 

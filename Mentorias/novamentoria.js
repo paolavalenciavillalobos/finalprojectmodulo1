@@ -60,23 +60,24 @@ const excluirUser = async (id) =>{
 	}
 };
 
+//pegar pelo id o formulario html
 const formulario = document.getElementById('formulario')
 
+//Function que pega os dados do mentor especifico escolhido pelo usuario
 const buscarMentor = async (id) => {
-    if(id == null){
-        return false
-    }
     const response = await fetch (`https://api-final-project-pkm5.onrender.com/mentores/${id}`)
     const mentor = await response.json()
     return mentor
 }
 
+//chamar os mentores da API para cheiar nossa função mentoresSelect
 const buscarMentores = async () => {
     const response = await fetch (`https://api-final-project-pkm5.onrender.com/mentores/`)
     const mentores = await response.json()
     return mentores
 }
 
+//Function que cria option no select do html com os dados dos mentores
 const mentoresSelect = async() => {
     const listaDeMentores = await buscarMentores()
     const mentoresFormulario = document.getElementById('selectMentores')
@@ -88,6 +89,7 @@ const mentoresSelect = async() => {
     console.log(mentoresFormulario)
 }
 
+//function para usar o metodo POST na API
 const novaMentoria = async(mentorparametro) => {
     try {
         await fetch('https://api-final-project-pkm5.onrender.com/mentorias', {
@@ -104,9 +106,11 @@ const novaMentoria = async(mentorparametro) => {
     }
 }
 
-
+//escuta do formulario
 formulario.addEventListener('submit', async(e) => {
     e.preventDefault()
+
+    //valor de cada input
 
     const mentoria = formulario.elements['mentoria'].value
     const mentor = formulario.elements['selectMentores'].value
@@ -115,12 +119,14 @@ formulario.addEventListener('submit', async(e) => {
     /*Dar o valor de ativo o inativo pro Status com operador ternario (true/false)*/
     const status = checkbox.checked ? 'ativo' : 'inativo';
 
-    const mentorObjeto = await buscarMentor(mentor)
+    const mentorObjeto = await buscarMentor(mentor) //esta variable tem o id do mentor escolhido e procura ele com um callback
 
     console.log(mentoria)
 
+    //colocar os dados do input na API
+
     const mentoriaNova = {
-        titulo: mentoria,
+        titulo: mentoria, //nome na API e igual variable nome
         status,
         mentor: { 
             nome: mentorObjeto.nome,
@@ -129,7 +135,7 @@ formulario.addEventListener('submit', async(e) => {
         }
     }
 
-    novaMentoria(mentoriaNova)
+    novaMentoria(mentoriaNova) //passar na function de POST as informaçoes da variable
 })
 
 mentoresSelect()

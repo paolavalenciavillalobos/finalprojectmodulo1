@@ -89,7 +89,7 @@ const editarFormularioMentores = async (parametroeditar) => {
     document.getElementById('email').value = parametroeditar.email
 }
 
-//função principal
+//função para preencher os dados certos
 const atualizarDadosProntos = async () => {
     parametrosId() //chama o ID do mentor
     console.log(id)

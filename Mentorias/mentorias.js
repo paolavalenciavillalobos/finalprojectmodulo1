@@ -1,3 +1,4 @@
+//Functions para cada botão do html
 function mentoriasButton() {
   window.location = `mentorias.html`;
 }
@@ -22,6 +23,7 @@ function editar(identificador) {
   window.location = `editarmentoria.html?id=${identificador}`
 }
 
+//Function para pegar o ultimo user do Array e fazer integração do login com a API
 const emailUser = (users) => {
 	const dados = document.getElementById('dados')
 	dados.innerHTML = ''
@@ -61,23 +63,24 @@ const excluirUser = async (id) =>{
 		console.error(error);
 	}
 };
-
+//Pegar pelo ID o Input de pesquisa
 const search = document.getElementById('search')
 
-
+//function para cheiar a tabela com os dados da API do array
 const mentorias = (parametromentores) => {
   const tabla = document.querySelector('.my-table tbody')
   tabla.innerHTML = ''
+  //saber o tamanho do array para pasar Style no ultimo item da coleção
   const contarMentorias = parametromentores.length
   console.log(contarMentorias)
-  parametromentores.forEach((item, index) => {
+  parametromentores.forEach((item, index) => { // array da coleção
     let left = ""
     let right = ""
     if (contarMentorias === index + 1) {
       left = 'bottomleft'
       right = 'bottomright'
     }
-    const mentoriashtml =
+    const mentoriashtml = //escrita HTML 
       `
         <tr>
         <td class="left ${left}">${item.titulo}</td>
@@ -114,7 +117,9 @@ const statusDiv = () => {
   });
 }
 
+//Function para procurar todos os dados da coleção na API
 const carregarTodosOsDados = async (parametroNãoObrigatorio = null) => {
+  //parametro não obrigatorio para a function de pesquisa
   let inputText = ''
   if (parametroNãoObrigatorio) {
     inputText = `?q=${parametroNãoObrigatorio}`
@@ -127,6 +132,7 @@ const carregarTodosOsDados = async (parametroNãoObrigatorio = null) => {
   statusDiv()
 };
 
+//function para excluir um item pelo ID
 const excluir = async (identificador) => {
   try {
     await fetch(`https://api-final-project-pkm5.onrender.com/mentorias/${identificador}`, {
@@ -141,6 +147,7 @@ const excluir = async (identificador) => {
   }
 };
 
+//escuta do input da pesquisa
 search.addEventListener('keyup', (e) => {
   e.preventDefault()
   const inputData = search.value

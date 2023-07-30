@@ -78,7 +78,7 @@ const carregarAlunos = async() => {
 }
 
 const editarAluno = async (parametroaluno) => {
-    await fetch(`https://api-final-project-pkm5.onrender.com/mentores/${id}`, {
+    await fetch(`https://api-final-project-pkm5.onrender.com/alunos/${id}`, {
         method: 'PUT',
         headers: {
             'Accept': 'application/json, text/plain, */*',

@@ -64,9 +64,6 @@ const formulario = document.getElementById('formulario')
 console.log(formulario)
 
 const buscarMentoria = async (id) => {
-    if(id == null){
-        return false
-    }
     const response = await fetch (`https://api-final-project-pkm5.onrender.com/mentorias/${id}`)
     const mentoria = await response.json()
     return mentoria
