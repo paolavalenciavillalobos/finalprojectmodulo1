@@ -126,8 +126,8 @@ formulario.addEventListener('submit', async(e) => {
     //colocar os dados do input na API
 
     const mentoriaNova = {
-        titulo: mentoria, //nome na API e igual variable nome
-        status,
+        titulo: mentoria, 
+        status, //nome na API e igual variable STATUS
         mentor: { 
             nome: mentorObjeto.nome,
             id: mentorObjeto.id
