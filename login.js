@@ -1,6 +1,3 @@
-function entrar() {
-	window.location = `Mentores/mentores.html`;
-}
 
 const formulario = document.getElementById('formulario')
 
@@ -32,7 +29,7 @@ email.addEventListener('input', () => {
 
 const getUser = async (user) => {
     try {
-        await fetch('https://api-final-project-pkm5.onrender.com/Usuario', {
+        await fetch('https://api-final-project-pkm5.onrender.com/usuario', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json, text/plain, */*',
@@ -40,7 +37,7 @@ const getUser = async (user) => {
             },
             body: JSON.stringify(user)
         })
-        window.location = 'login.html'
+        window.location = 'Mentores/mentores.html'
     } catch (error) {
         console.error(error)
     }

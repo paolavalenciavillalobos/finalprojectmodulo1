@@ -1,3 +1,4 @@
+//Functions para cada botão do html
 function mentoriasButton() {
 	window.location = `../Mentorias/mentorias.html`;
 }
@@ -24,15 +25,61 @@ function editar(identificador) {
 	window.location = `editarmentor.html?id=${identificador}`
 }
 
+//Pegar pelo ID o Input de pesquisa
+
 const search = document.getElementById('search')
 
+//Function para pegar o ultimo user do Array e fazer integração do login com a API
+
+const emailUser = (users) => {
+	const dados = document.getElementById('dados')
+	dados.innerHTML = ''
+	if (users.length > 0) {
+		const ultimoUsuario = users[users.length - 1]; // obter o ultimo usuario do array
+	
+		const divEmail = `
+		  <p id="userName">Bem-vindo   <button class="sair" onclick="excluirUser(${ultimoUsuario.id})">Sair</button></p>
+		  <p id="userMail">${ultimoUsuario.email}</p>
+		`;
+	
+		dados.innerHTML = divEmail;
+	  }
+	};
+
+
+//Pegar os dados do Usuario cadastrados na API
+const usuario = async () => {
+	const response = await fetch(`https://api-final-project-pkm5.onrender.com/usuario`)
+    const usuarioData = await response.json()
+    emailUser(usuarioData)
+}
+
+//Function para apagar o ultimo usuario do array e depois carrgera de novo a pagina de Login
+
+const excluirUser = async (id) =>{
+	try {
+		await fetch(`https://api-final-project-pkm5.onrender.com/usuario/${id}`, {
+			method: 'DELETE',
+			headers: {
+				'Accept': 'application/json',
+			}
+		});
+		usuario()
+    window.location = '../index.html';
+	} catch (error) {
+		console.error(error);
+	}
+};
+
+//funCtion para cheiar a tabela com os dados da API do array
 
 const mentores = (mentores) => {
 	const table = document.querySelector('.my-table tbody')
 	table.innerHTML = ''
+	//saber o tamanho do array para pasar Style no ultimo item da coleção
 	const countMentores = mentores.length
 	console.log(countMentores)
-	mentores.forEach((item, index) => {
+	mentores.forEach((item, index) => { // array da coleção
 		console.log(index)
 		let left = ""
 		let right = ""
@@ -40,7 +87,7 @@ const mentores = (mentores) => {
 			left = 'bottomleft'
 			right = 'bottomright'
 		}
-		const mentoreshtml =
+		const mentoreshtml = //escrita HTML 
 		 `
 		 <tr>
 		 <td class="left ${left}">${item.nome}</td>
@@ -55,11 +102,13 @@ const mentores = (mentores) => {
 		 </td>
 		 </tr>
 		`
-		table.innerHTML = table.innerHTML + mentoreshtml
+		table.innerHTML = table.innerHTML + mentoreshtml //cheiar a tabela com todos os dados do array
 		;
 })}
 
+//Function para procurar todos os dados da coleção na API
 const todosOsMentores = async (parametroNãoObrigatorio = null) => {
+	//parametro não obrigatorio para a function de pesquisa
 	let inputText = ''
 	if(parametroNãoObrigatorio){
 		inputText = `?q=${parametroNãoObrigatorio}`
@@ -70,6 +119,8 @@ const todosOsMentores = async (parametroNãoObrigatorio = null) => {
     const mentoresData = await response.json()
     mentores(mentoresData)
 }
+
+//function para excluir um item pelo ID
 
 const excluir = async (id) =>{
 	try {
@@ -85,6 +136,7 @@ const excluir = async (id) =>{
 	}
 };
 
+//escuta do input da pesquisa
 search.addEventListener('keyup', (e) => {
 	e.preventDefault()
 	const inputData = search.value
@@ -98,3 +150,4 @@ search.addEventListener('keyup', (e) => {
 })
 
 todosOsMentores()
+usuario()

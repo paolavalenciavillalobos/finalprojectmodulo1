@@ -18,6 +18,48 @@ function back() {
 	window.location = "turmas.html";
 }
 
+//Function para pegar o ultimo user do Array e fazer integração do login com a API
+
+const emailUser = (users) => {
+	const dados = document.getElementById('dados')
+	dados.innerHTML = ''
+	if (users.length > 0) {
+		const ultimoUsuario = users[users.length - 1]; // obter o ultimo usuario do array
+	
+		const divEmail = `
+		  <p id="userName">Bem-vindo   <button class="sair" onclick="excluirUser(${ultimoUsuario.id})">Sair</button></p>
+		  <p id="userMail">${ultimoUsuario.email}</p>
+		`;
+	
+		dados.innerHTML = divEmail;
+	  }
+	};
+
+
+//Pegar os dados do Usuario cadastrados na API
+const usuario = async () => {
+	const response = await fetch(`https://api-final-project-pkm5.onrender.com/usuario`)
+    const usuarioData = await response.json()
+    emailUser(usuarioData)
+}
+
+//Function para apagar o ultimo usuario do array e depois carrgera de novo a pagina de Login
+
+const excluirUser = async (id) =>{
+	try {
+		await fetch(`https://api-final-project-pkm5.onrender.com/usuario/${id}`, {
+			method: 'DELETE',
+			headers: {
+				'Accept': 'application/json',
+			}
+		});
+		usuario()
+    window.location = '../index.html';
+	} catch (error) {
+		console.error(error);
+	}
+};
+
 const formulario = document.getElementById('formulario')
 
 const carregarMentor = async (id) => {
@@ -127,3 +169,4 @@ formulario.addEventListener('submit', async (e) => {
 
 mentoresSelect()
 mentoriasSelect()
+usuario()

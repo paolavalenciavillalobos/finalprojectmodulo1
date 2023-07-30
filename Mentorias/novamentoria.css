@@ -124,6 +124,21 @@ body {
 
 }
 
+.sair{
+  border: none;
+  border-radius: 16px;
+  background-color: red;
+  color: white;
+  font-family: 'Sora', sans-serif;
+  font-size: 93%;
+  font-weight: 400;
+
+}
+
+.sair:hover {
+  background-color: rgb(242, 97, 97);
+}
+
 #title {
   height: 10vh;
   margin: 1%;
@@ -272,21 +287,3 @@ body {
 
 
 
-
-
-/* Media queries para ajustar el diseño en diferentes tamaños de pantalla */
-
-@media screen and (max-width: 768px) {
-  body {
-    flex-direction: column;
-  }
-
-  #menu {
-    width: 100%;
-    min-width: 0;
-  }
-
-  #cantoDireito {
-    width: 100%;
-  }
-}

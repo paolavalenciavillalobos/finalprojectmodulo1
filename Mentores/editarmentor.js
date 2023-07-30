@@ -18,6 +18,31 @@ function back() {
 	window.location = "mentores.html";
 }
 
+//Function para pegar o ultimo user do Array e fazer integração do login com a API
+
+const emailUser = (users) => {
+	const dados = document.getElementById('dados')
+	dados.innerHTML = ''
+	if (users.length > 0) {
+		const ultimoUsuario = users[users.length - 1]; // obter o ultimo usuario do array
+	
+		const divEmail = `
+		  <p id="userName">Bem-vindo   <button class="sair" onclick="excluirUser(${ultimoUsuario.id})">Sair</button></p>
+		  <p id="userMail">${ultimoUsuario.email}</p>
+		`;
+	
+		dados.innerHTML = divEmail;
+	  }
+	};
+
+
+//Pegar os dados do Usuario cadastrados na API
+const usuario = async () => {
+	const response = await fetch(`https://api-final-project-pkm5.onrender.com/usuario`)
+    const usuarioData = await response.json()
+    emailUser(usuarioData)
+}
+
 //Pegar o formulario desde o Id no html
 const formulario = document.getElementById('formulario')
 
@@ -58,18 +83,18 @@ const editarMentores = async (mentor) => {
     window.location = 'mentores.html'
 }
 
-//Carregar os valores no input
+//Carregar os valores da API no input
 const editarFormularioMentores = async (parametroeditar) => {
     document.getElementById('nome').value = parametroeditar.nome
     document.getElementById('email').value = parametroeditar.email
 }
 
-
+//função principal
 const atualizarDadosProntos = async () => {
-    parametrosId()
+    parametrosId() //chama o ID do mentor
     console.log(id)
-    const mentorEditado = await carregarMentores()
-    editarFormularioMentores(mentorEditado)
+    const mentorEditado = await carregarMentores() //carrega a info dos mentores
+    editarFormularioMentores(mentorEditado) //passa a informação dos mentores na função
 }
 
 //finalmente atualizar os dados na api
@@ -89,3 +114,4 @@ formulario.addEventListener('submit', (evento) => {
 })
 
 atualizarDadosProntos()
+usuario()
